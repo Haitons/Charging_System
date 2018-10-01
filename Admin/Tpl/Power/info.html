@@ -1,0 +1,38 @@
+<html>
+	<head>
+		<title>information</title>
+		<load file="__PUBLIC__/css/information.css"/>
+	</head>
+	<body>
+		<table class="gridtable">
+			<tr>
+				<th>ID</th>
+				<th>管理员账号</th>
+				<th>所属角色</th>
+				<th>邮箱</th>
+				<th>手机号</th>
+				<th>证件号</th>
+				<th>管理操作</th>
+			</tr>
+			<volist name="List" id="v">
+				<tr>
+					<td>{$v.id}</td>
+					<td>{$v.adminname}</td>
+					<td>
+					<if condition="$v.level eq 1">超级管理员
+							<elseif condition="$v.level eq 2"/>管理员
+							<elseif condition="$v.level eq 3"/>一般管理员
+							<else/>操作员
+						</if>
+					</td>
+					<td>{$v.mail}</td>
+					<td>{$v.telephone}</td>
+					<td>{$v.credid}</td>
+					<td><a href="__URL__/modify/id/{$v.id}">编辑</a>|<a href="__URL__/del/id/{$v.id}">删除</a></td>
+				</tr>
+			</volist>
+		</table>
+		{$page}
+	
+	</body>
+</html>

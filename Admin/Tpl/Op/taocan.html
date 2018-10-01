@@ -1,0 +1,30 @@
+<html>
+	<head>
+		<title>information</title>
+		<load file="__PUBLIC__/css/cz.css"/>
+		<script></script>
+	</head>
+	<body>
+		<table class="gridtable">
+			<tr>
+				<th>套餐名称</th>
+				<th>使用人数</th>
+			</tr>
+			<volist name="List" id="v">
+				<tr>
+					<td>{$v.tcname}</td>
+					<td>
+						<switch name='{$v.id}'>
+						<case value='1'>ssss1</case>
+						<default/>ssssss
+						</switch>
+					
+					
+					</td>
+				</tr>
+			</volist>
+		</table>
+
+	
+	</body>
+</html>

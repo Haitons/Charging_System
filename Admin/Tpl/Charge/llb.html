@@ -1,0 +1,40 @@
+<html>
+	<head>
+		<title>information</title>
+		<load file="__PUBLIC__/css/llb.css"/>
+	</head>
+	<body>
+		<table class="gridtable">
+			<tr>
+				<th>流量包名称</th>
+				<th>流量包金额</th>
+				<th>流量包大小</th>
+				<th>流量包类型</th>
+				<th>有效期</th>
+				<th>是否生效</th>
+				<th>管理操作</th>
+			</tr>
+			<volist name="List" id="v">
+				<tr>
+					<td>{$v.llname}</td>
+					<td>{$v.money}元</td>
+					<td>{$v.lldata}M</td>
+					<td>
+					<if condition="$v.type eq 1">普通
+							<else/>特殊
+						</if>
+					</td>
+					<td>{$v.date}个月</td>
+					<td>
+					<if condition="$v.effect eq 1">立即生效
+							<else/>下月生效
+						</if>
+					</td>
+					<td><a href="__URL__/lledit/id/{$v.id}">编辑</a>|<a href="__URL__/lldel/id/{$v.id}">删除</a></td>
+				</tr>
+			</volist>
+		</table>
+		{$page}
+	
+	</body>
+</html>

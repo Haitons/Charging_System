@@ -1,0 +1,30 @@
+table.gridtable {  
+    font-family: verdana,arial,sans-serif;  
+    font-size:11px;  
+    color:#333333;  
+	border-style: solid;  
+    border-color: #7FFFD4 ;
+    border-width:1;  
+    border-collapse: collapse;
+    width:1160;  
+    height:250;
+    
+}  
+table.gridtable th {  
+
+    padding: 8px;  
+ 
+    border-color: #666666;  
+    background-color: #dedede;
+    padding-right:50px; 
+    
+}  
+table.gridtable td {  
+
+    padding: 8px;  
+    font-family: "Microsoft YaHei" ! important;
+    border-color: #666666;  
+    background-color: #ffffff; 
+    position:relative;
+    left:25px; 
+} 

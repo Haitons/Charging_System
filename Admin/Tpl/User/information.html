@@ -1,0 +1,40 @@
+<html>
+	<head>
+		<title>information</title>
+		<load file="__PUBLIC__/css/information.css"/>
+	</head>
+	<body>
+		<table class="gridtable">
+			<tr>
+				<th>用户账号</th>
+				<th>用户名</th>
+				<th>用户类型</th>
+				<th>学号/工号</th>
+				<th>手机号</th>
+				<th>证件号</th>
+				<th>余额</th>
+				<th>添加用户时间</th>
+				<th>管理</th>
+			</tr>
+			<volist name="List" id="v">
+				<tr>
+					<td>{$v.workid}</td>
+					<td>{$v.username}</td>
+					<td>
+						<if condition="$v.type eq 0">学生
+							<elseif condition="$v.type eq 1"/>教职工
+							<else/>家属区
+						</if>
+					</td>
+					<td>{$v.workid}</td>
+					<td>{$v.telephone}</td>
+					<td>{$v.credid}</td>
+					<td>{$v.money}元</td>
+					<td>{$v.ustime|date="Y年m月d日 H:i:s",###}</td>
+					<td><a href="__URL__/tent/id/{$v.id}">充值</a>|<a href="__URL__/modify/id/{$v.id}">编辑</a></td>
+				</tr>
+			</volist>
+		</table>
+		{$page}
+	</body>
+</html>

@@ -1,0 +1,31 @@
+<html>
+	<head>
+		<title>information</title>
+		<load file="__PUBLIC__/css/information.css"/>
+		<script></script>
+	</head>
+	<body>
+		<table class="gridtable">
+			<tr>
+				<th>上网账号</th>
+				<th>用户名</th>
+				<th>原套餐</th>
+				<th>新套餐</th>
+				<th>申请时间</th>
+				<th>操作人</th>
+			</tr>
+			<volist name="List" id="v">
+				<tr>
+					<td>{$v.workid}</td>
+					<td>{$v.username}</td>
+					<td>{$v.tcname}</td>
+					<td>{$v.ntaocan.tcname}</td>
+					<td>{$v.kttime|date="Y年m月d日 H:i:s",###}(下月生效)</td>
+					<td>{$Think.session.adminname}</td>
+				</tr>
+			</volist>
+		</table>
+		{$page}
+	
+	</body>
+</html>

@@ -1,0 +1,32 @@
+<html>
+	<head>
+		<title>information</title>
+		<load file="__PUBLIC__/css/taocan.css"/>
+	</head>
+	<body>
+		<table class="gridtable">
+			<tr>
+				<th>套餐名称</th>
+				<th>套餐类型</th>
+				<th>总流量</th>
+				<th>缴费周期</th>
+				<th>管理操作</th>
+			</tr>
+			<volist name="List" id="v">
+				<tr>
+					<td>{$v.tcname}</td>
+					<td>
+					<if condition="$v.type eq 1">流量
+							<else/>宽带
+						</if>
+					</td>
+					<td>{$v.tcmuch}M</td>
+					<td>{$v.week}个月</td>
+					<td><a href="__URL__/edit/id/{$v.id}">编辑</a>|<a href="__URL__/del/id/{$v.id}">删除</a></td>
+				</tr>
+			</volist>
+		</table>
+		{$page}
+	
+	</body>
+</html>

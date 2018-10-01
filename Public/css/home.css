@@ -1,0 +1,31 @@
+.title{
+				border:1px solid #7FFFD4 ;   /* 行名称边框 */  
+                background-color:#F5FFFA;   /* 行名称背景色 */  
+    			height:20px;
+    			  
+			}
+		table.gridtable {  
+    font-family: verdana,arial,sans-serif;  
+    font-size:11px;  
+    color:#333333;  
+	border-style: solid;  
+    border-color: #7FFFD4 ;
+    border-width:1;  
+    border-collapse: collapse;
+    width:1160;  
+    height:250;
+}  
+table.gridtable th {  
+
+    padding: 8px;  
+ 
+    border-color: #666666;  
+    background-color: #dedede;  
+}  
+table.gridtable td {  
+
+    padding: 8px;  
+    
+    border-color: #666666;  
+    background-color: #ffffff;  
+}  

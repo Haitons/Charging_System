@@ -1,0 +1,1 @@
+http://www.thinkcmf.com/font/icons/recycle

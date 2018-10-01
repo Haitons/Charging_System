@@ -1,0 +1,40 @@
+<html>
+	<head>
+		<title>information</title>
+		<load file="__PUBLIC__/css/information.css"/>
+	</head>
+	<body>
+		<table class="gridtable">
+			<tr>
+				<th>上网账号</th>
+				<th>用户名</th>
+				<th>当月套餐</th>
+				<th>次月套餐</th>
+				<th>账号状态</th>
+				<th>流量包流量</th>
+				<th>开通时间</th>
+				<th>套餐操作</th>
+				<th>账号操作</th>
+			</tr>
+			<volist name="List" id="v">
+				<tr>
+					<td>{$v.workid}</td>
+					<td>{$v.username}</td>
+					<td>{$v.tcname}</td>
+					<td>{$v.ntaocan.tcname}</td>
+					<td>
+					<if condition="$v.state eq 1">正常
+							<else/>销户
+						</if>
+					</td>
+					<td>{$v.soil}M</td>
+					<td>{$v.kttime|date="Y年m月d日 H:i:s",###}</td>
+					<td><a href="__URL__/tcchange/id/{$v.id}">套餐变更</a>|<a href="__URL__/tjllb/id/{$v.id}">流量包</a></td>
+					<td><a href="__URL__/modify/id/{$v.id}">编辑</a>|<a href="__URL__/account/id/{$v.id}">销户</a></td>
+				</tr>
+			</volist>
+		</table>
+		{$page}
+	
+	</body>
+</html>
